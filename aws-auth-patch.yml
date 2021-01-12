@@ -11,7 +11,10 @@ data:
       rolearn: arn:aws:iam::428362520565:role/UdacityFlaskDeployCBKubectlRole
       username: build
   mapUsers: |
-    []
+    - userarn: arn:aws:iam::428362520565:user/project_user
+      username: project_user
+    groups:
+      - system:masters
 kind: ConfigMap
 metadata:
   creationTimestamp: "2021-01-12T11:13:21Z"
